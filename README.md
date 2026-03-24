@@ -11,6 +11,9 @@ The work is inspired by:
 
 However, instead of classical tracking, this project adapts the method for **dense vessel representations**, as found in CTA datasets like ImageCAS.
 
+Dataset used:
+https://www.kaggle.com/datasets/xiaoweixumedicalai/imagecas
+
 ---
 
 ##  Key Idea
@@ -50,7 +53,7 @@ Vessel Reconstruction
 
 ---
 
-## 📍 Role of Ostia (Important Contribution)
+##  Role of Ostia (Important Contribution)
 
 Unlike simple filtering, this project explicitly uses **ostia points** to:
 
@@ -112,29 +115,6 @@ Instead, it is an adaptation for dense CTA data where:
 
 ---
 
-##  How to Run
-
-```bash
-# Step 1: Generate seeds
-python preprocessing/generate_seeds.py
-
-# Step 2: Generate ostia
-python preprocessing/generate_ostia.py
-
-# Step 3: Filter seeds
-python preprocessing/filter_seeds_kmeans.py
-
-# Step 4: Run CNN filtering
-python tracking/track2.py --impath ... --seeds ... --ostia ... --tracknet ...
-
-# Step 5: Compute radius
-python radius/compute_radius.py
-
-# Step 6: Visualize
-python visualization/visualize_points.py
-```
-
----
 
 ##  Dependencies
 
